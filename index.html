@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Informatics College</title>
+	<meta charset="utf-8">
+
+ <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body class="body">
+<header class="mainheader">
+	<img src="./oimages/logo.png" style="height:100px; width:100px;" >
+	<content id="search">
+		<form>
+  <input type="text" name="search" placeholder="Search on Google..." onclick="window.location.href='search.html'">
+</form>
+	</content>
+	<nav>
+		<ul>
+			<li><a href="./index.html" >Home</a></li>
+			<li><a href="./trips.html">Trips</a></li>
+			 
+			<li><a href="./thoughts.html">Thoughts</a></li>
+			<li><a href="./contact.html">Contact</a></li>
+			
+		</ul> 
+	</nav>
+</header>
+<br>
+<div class="slideshow-container">
+
+<div class="iambrpslides fade" id="homepic">
+  <div class="numbertext">01 / 03</div>
+  <img src="./oimages/a.png"  >
+ </div>
+<div class="iambrpslides fade" id="homepic">
+  <div class="numbertext">02 / 03</div>
+  <img src="./oimages/b.png" >
+  </div>
+<div class="iambrpslides fade" id="homepic">
+  <div class="numbertext">03 / 03</div>
+  <img src="./oimages/c.png">
+</div>
+</div>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("iambrpslides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2500); // This is for Changing image every 2.5 seconds
+}
+</script>
+<br>		
+<script type="text/javascript">
+  document.title="Home";
+</script>				
+<div class="mainContent">
+	<div class="Content">
+		<article class="topContent">
+			<header>
+			 <h3><a href="#" title="My First Post">What this site is about? </a>	</h3>  
+			</header>
+			<footer>
+				<p class="post-info">-written by Kanika Mugrai</p>
+			</footer>
+			<content>
+<p>This site contains data about the author Kanika Mugrai.<br>Such as some photos from different times.<br>
+	And a poem which is inserted on Thoughts section.
+</p>
+			</content>
+		</article>
+
+		<article class="bottomContent">
+			<header>
+			<h3><a href="#" title="Pathway Programme">What purpose will it serve?</a>	</h3>  
+			</header>
+			<footer>
+				<p class="post-info">-written by Kanika Mugrai</p>
+			</footer>
+			<content>
+<p>Purpose of it is quite clear.<br>
+	It would be submitted as a small project required in WE.
+</p>
+			</content>
+		</article>
+</div>
+</div>
+<aside class="top-sidebar">
+	<article>
+		<h3></h3>
+		<p>Your life is your making.</p>
+	</article>
+</aside>
+<aside class="middle-sidebar">
+	<article>
+		<h3></h3>
+		<p>It's our wits that make us man.<br>
+		Our wits to improve, control and change.</p>
+	</article>
+</aside>
+</body>
+</html>
